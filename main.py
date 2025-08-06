@@ -5,5 +5,7 @@ clear_screen()
 animate(coloured("red text", "red"))
 clear_screen()
 
+print(cities)
+
 
 
