@@ -6,6 +6,10 @@ import time
 def clear_screen():
     os.system ('cls' if os.name == 'nt' else 'clear')
 
+def clear_wait():
+    time.sleep(1)
+    clear_screen()
+
 
 def animate(text, delay=0.05):
     for c in text:
@@ -23,9 +27,11 @@ def coloured(text, colour='green'):
         'magenta': '\033[38;5;125m',
         'blue': '\033[38;5;21m',
         'yellow': '\033[38;5;222m',
+        'code' : '\033[38;5;46m' ,
         'end': '\033[0m'
     }
     return f"{colours.get(colour, '')}{text}{colours['end']}"
 
 def introduction():
-    animate(coloured())
+    animate(coloured()) 
+
