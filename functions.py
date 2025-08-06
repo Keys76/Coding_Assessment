@@ -1,12 +1,9 @@
 import os
-
-def clear_screen():
-    os.system ('cls' if os.name == 'nt' else 'clear')
-
-import os
 import sys
 import time
 
+def clear_screen():
+    os.system ('cls' if os.name == 'nt' else 'clear')
 
 def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
