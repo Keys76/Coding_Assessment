@@ -1,9 +1,9 @@
 cities = [
-    "ancient_greece",
-    "ancient_china",
-    "ancient_india",
-    "ancient_rome",
-    "ancient_egypt",
-    "vikings"
+    "🏛 Ancient Greece 📜",
+    "⛩️ Ancient China 🐲",
+    "🛕 Ancient India 🍛",
+    "🇲🇪 Ancient Rome 🕊️",
+    "🐫 Ancient Egypt ⚱️",
+    "🪓 Vikings ⛵"
 ]
 
