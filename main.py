@@ -1,8 +1,6 @@
 import time
 from functions import clear_screen, animate, coloured, clear_wait, introduction 
-from data import cities
-
-
+from data import cities, city, date, health, items
 
 # Clear the screen before starting the animation
 clear_screen()
@@ -21,5 +19,10 @@ clear_wait()
 # Display the introduction message
 introduction()
 
-
+animate(coloured("Agent Information:", "code"))
+print(coloured(f"\nLocation: {cities[0]}", "cyan"))
+print(coloured(f"City: {city}", "cyan"))
+print(coloured(f"Date: {date}", "cyan"))
+print(coloured(f"Health: {health}", "cyan"))
+print(coloured("\nItems:", "code"))
 
