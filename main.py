@@ -1,6 +1,8 @@
 import time
-from functions import clear_screen, animate, coloured, clear_wait 
+from functions import clear_screen, animate, coloured, clear_wait, introduction 
 from data import cities
+
+
 
 # Clear the screen before starting the animation
 clear_screen()
@@ -16,15 +18,8 @@ clear_screen()
 # Wait for a second before clearing the screen
 clear_wait()
 
-# Display a message indicating the activation of the Time Beacon
-animate(coloured("Time Beacon 505 activated...", "code"))
-clear_screen()
-animate(coloured("Loading data...", "code"))
-clear_screen()
-animate(coloured("Complete", "code"))
+# Display the introduction message
+introduction()
 
-clear_wait()
 
-animate(coloured("Message from commander:", "code"))
-print(coloured("Agent 0712, you are our last hope to save the timeline. There is something trapping the entire agency in a time loop. You must track it down, following its path throughout time, and defeat it.We are all counting on you to save us.", "code"))
 
