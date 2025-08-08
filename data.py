@@ -14,10 +14,18 @@ date = "429 BCE"
 health = 100
 
 items = [
-    "Time Beacon 505",
+    "Time Beacon 108",
     "Bottle of Water",
     "First Aid Kit",
     "Flashlight",
     "Map",
     "One set of rations"
+]
+
+missions = [
+    "mission 1",
+    "mission 2",
+    "mission 3",
+    "mision 4",
+    ""
 ]
