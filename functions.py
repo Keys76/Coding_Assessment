@@ -48,6 +48,7 @@ def introduction():
     time.sleep(10)
     clear_screen()
 
+# Function to display agent stats and mission details
 def stats():
     animate(coloured("Agent Information:", "bold"))
     print(coloured(f"\nLocation: {cities[0]}", "cyan"))
@@ -61,5 +62,6 @@ def stats():
     animate(coloured("\nMission Objective:", "bold"))
     print()
     print(coloured(missions[0], "cyan"))
+
 
 
