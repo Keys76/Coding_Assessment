@@ -1,5 +1,5 @@
 #list of cities with emojis and themes
-cities = [
+civilisations = [
     "Ancient Greece",
     "Ancient China",
     "Ancient India",
@@ -12,6 +12,21 @@ cities = [
 city = "Thebes"
 date = "429 BCE"
 health = 100
+
+cities = [
+    "Thebes",
+    "Yangtze River Basin",
+    "Palitaputra",
+    "Rome",
+    "Giza",
+    "Norway",
+]
+
+date = [
+    "429 BCE",
+    "3001 BCE",
+    "1100 CE"
+]
 
 items = [
     "Time Beacon 108",
@@ -27,5 +42,6 @@ missions = [
     "mission 2",
     "mission 3",
     "mision 4",
-    ""
+    "mission 5",
+    "mission 6"
 ]
