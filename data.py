@@ -1,3 +1,5 @@
+health = 100
+
 #list of cities with emojis and themes
 civilisations = [
     "Ancient Greece",
@@ -8,10 +10,7 @@ civilisations = [
     "Vikings"
 ]
 
-# Create variables for the city and date
-city = "Thebes"
-date = "429 BCE"
-health = 100
+# Create variables for the city
 
 cities = [
     "Thebes",
@@ -26,7 +25,9 @@ date = [
     "429 BCE",
     "3001 BCE",
     "1100 CE",
-    
+    "352 CE",
+    "2576 CE",
+    "999 CE"
 ]
 
 items = [
