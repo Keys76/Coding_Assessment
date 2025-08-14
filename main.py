@@ -1,6 +1,6 @@
 import time
-from functions import clear_screen, animate, coloured, clear_wait, introduction, stats 
-from data import cities, civilisations, date, health, items, missions
+from functions import *
+from data import *
 
 # Clear the screen before starting the animation
 clear_screen()
@@ -11,7 +11,10 @@ clear_wait()
 # Display the introduction message
 introduction()
 
+# Display the agent stats and mission details
 stats()
+
+
 
 
 
