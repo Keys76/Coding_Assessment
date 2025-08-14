@@ -40,7 +40,7 @@ items = [
 ]
 
 missions = [
-    "mission 1",
+    "Find the sphinx who is reigning terror over the city of Thebes, you must answer its three riddles to pass.",
     "mission 2",
     "mission 3",
     "mision 4",
