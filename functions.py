@@ -1,7 +1,7 @@
 import os
 import sys
 import time
-from data import cities, civilisations, date, health, items, missions  
+from data import * 
 
 # Function to clear the console screen
 def clear_screen():
