@@ -1,6 +1,6 @@
 import time
 from functions import clear_screen, animate, coloured, clear_wait, introduction, stats 
-from data import cities, city, date, health, items, missions
+from data import cities, civilisations, date, health, items, missions
 
 # Clear the screen before starting the animation
 clear_screen()
@@ -12,8 +12,6 @@ clear_wait()
 introduction()
 
 stats()
-
-
 
 
 
