@@ -1,7 +1,7 @@
 import os
 import sys
 import time
-from data import civilisations, city, date, health, items, missions  
+from data import cities, civilisations, date, health, items, missions  
 
 # Function to clear the console screen
 def clear_screen():
@@ -52,7 +52,7 @@ def introduction():
 def stats():
     animate(coloured("Agent Information:", "bold"))
     print(coloured(f"\nLocation: {civilisations[0]}", "cyan"))
-    print(coloured(f"City: {city}", "cyan"))
+    print(coloured(f"City: {cities}", "cyan"))
     print(coloured(f"Date: {date}", "cyan"))
     print(coloured(f"Health: {health}", "cyan"))
     animate(coloured(f"\nItems:", "bold"))
