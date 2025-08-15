@@ -14,7 +14,31 @@ introduction()
 # Display the agent stats and mission details
 stats()
 
-
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
+print(coloured("                                         ", "back"))
 
 
 
