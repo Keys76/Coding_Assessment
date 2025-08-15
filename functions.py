@@ -31,7 +31,8 @@ def coloured(text, colour='green'):
         'yellow': '\033[38;5;222m',
         'code' : '\033[38;5;28m' ,
         'bold' : '\033[1m',
-        'end': '\033[0m'
+        'end': '\033[0m',
+        'back': '\033[48;5;224m]'
     }
     return f"{colours.get(colour, '')}{text}{colours['end']}"
 
@@ -52,8 +53,8 @@ def introduction():
 def stats():
     animate(coloured("Agent Information:", "bold"))
     print(coloured(f"\nLocation: {civilisations[0]}", "cyan"))
-    print(coloured(f"City: {cities}", "cyan"))
-    print(coloured(f"Date: {date}", "cyan"))
+    print(coloured(f"City: {cities[0]}", "cyan"))
+    print(coloured(f"Date: {date[0]}", "cyan"))
     print(coloured(f"Health: {health}", "cyan"))
     animate(coloured(f"\nItems:", "bold"))
     print()
