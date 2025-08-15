@@ -14,7 +14,7 @@ introduction()
 # Display the agent stats and mission details
 stats()
 
-hellolloooooooooooooooooooooooooooooooooooo
+
 
 
 
