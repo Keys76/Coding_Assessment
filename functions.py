@@ -3,6 +3,7 @@ import sys
 import time
 from data import * 
 
+
 # Function to clear the console screen
 def clear_screen():
     os.system ('cls' if os.name == 'nt' else 'clear')
@@ -32,11 +33,12 @@ def coloured(text, colour='green'):
         'code' : '\033[38;5;28m' ,
         'bold' : '\033[1m',
         'end': '\033[0m',
-        'back': '\033[48;5;224m]',
-        'testicles': '\033[48;5;34m]',
-        'black_back': '\033[48;5;0m]',
-        'grey_back': '\033[48;5;245m]',
-        'white_back': '\033[48;5;231m]'
+        'back': '\033[48;5;224m',
+        't': '\033[48;5;21m',
+        'black_back': '\033[48;5;0m',
+        'grey_back': '\033[48;5;245m',
+        'white_back': '\033[48;5;231m',
+        'shadow': '\033[48;5;20m'
     }
     return f"{colours.get(colour, '')}{text}{colours['end']}"
 
@@ -67,6 +69,33 @@ def stats():
     animate(coloured("\nMission Objective:", "bold"))
     print()
     print(coloured(missions[0], "cyan"))
+
+def statssss():
+    animate(coloured("Agent Information:", "bold"))
+    if number == 1:
+        print(coloured(f"\nLocation: {civilisations[0]}", "cyan"))
+        print(coloured(f"City: {cities[0]}", "cyan"))
+        print(coloured(f"Date: {date[0]}", "cyan"))
+        animate(coloured("\nMission Objective:", "bold"))
+        print()
+        print(coloured(missions[0], "cyan"))
+    elif number == 2:
+        print(coloured(f"\nLocation: {civilisations[1]}", "cyan"))
+        print(coloured(f"City: {cities[1]}", "cyan"))
+        print(coloured(f"Date: {date[1]}", "cyan"))
+        animate(coloured("\nMission Objective:", "bold"))
+        print()
+        print(coloured(missions[1], "cyan"))  
+    elif number == 3:
+        print(coloured(f"\nLocation: {civilisations[2]}", "cyan"))
+        print(coloured(f"City: {cities[2]}", "cyan"))
+        print(coloured(f"Date: {date[2]}", "cyan"))
+        animate(coloured("\nMission Objective:", "bold"))
+        print()
+        print(coloured(missions[2], "cyan"))
+         
+
+
 
 
 
