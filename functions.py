@@ -1,3 +1,4 @@
+
 import os
 import sys
 import time
@@ -54,29 +55,15 @@ def introduction():
     time.sleep(10)
     clear_screen()
 
-# Function to display agent stats and mission details
-def stats():
-    animate(coloured("Agent Information:", "bold"))
-    print(coloured(f"\nLocation: {civilisations[0]}", "cyan"))
-    print(coloured(f"City: {cities[0]}", "cyan"))
-    print(coloured(f"Date: {date[0]}", "cyan"))
-    print(coloured(f"Health: {health}", "cyan"))
-    animate(coloured(f"\nItems:", "bold"))
-    print()
-    for i in items:
-        print(coloured(i, "cyan"))
-    animate(coloured("\nMission Objective:", "bold"))
-    print()
-    print(coloured(missions[0], "cyan"))
-
 # Function to display agent stats and mission details based on the current number
-def statssss(number):
+def stats(number, health):
 
     if number == 1:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[0]}", "cyan"))
         print(coloured(f"City: {cities[0]}", "cyan"))
         print(coloured(f"Date: {date[0]}", "cyan"))
+        print(coloured(f"Health: {health}", "cyan"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[0], "cyan"))
@@ -85,6 +72,7 @@ def statssss(number):
         print(coloured(f"\nLocation: {civilisations[1]}", "cyan"))
         print(coloured(f"City: {cities[1]}", "cyan"))
         print(coloured(f"Date: {date[1]}", "cyan"))
+        print(coloured(f"Health: {health}", "cyan"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[1], "cyan"))  
@@ -93,6 +81,7 @@ def statssss(number):
         print(coloured(f"\nLocation: {civilisations[2]}", "cyan"))
         print(coloured(f"City: {cities[2]}", "cyan"))
         print(coloured(f"Date: {date[2]}", "cyan"))
+        print(coloured(f"Health: {health}", "cyan"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[2], "cyan"))
@@ -101,6 +90,7 @@ def statssss(number):
         print(coloured(f"\nLocation: {civilisations[3]}", "cyan"))
         print(coloured(f"City: {cities[3]}", "cyan"))
         print(coloured(f"Date: {date[3]}", "cyan"))
+        print(coloured(f"Health: {health}", "cyan"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[3], "cyan"))
@@ -109,6 +99,7 @@ def statssss(number):
         print(coloured(f"\nLocation: {civilisations[4]}", "cyan"))
         print(coloured(f"City: {cities[4]}", "cyan"))
         print(coloured(f"Date: {date[4]}", "cyan"))
+        print(coloured(f"Health: {health}", "cyan"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[4], "cyan"))
@@ -117,6 +108,7 @@ def statssss(number):
         print(coloured(f"\nLocation: {civilisations[5]}", "cyan"))
         print(coloured(f"City: {cities[5]}", "cyan"))
         print(coloured(f"Date: {date[5]}", "cyan"))
+        print(coloured(f"Health: {health}", "cyan"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[5], "cyan"))
@@ -145,3 +137,9 @@ def shield():
 
     print(coloured("          ","back"),coloured("   ","black_back"),coloured("          ","back"))
     print(coloured("                         ","back"))
+
+# Function to prompt the user to continue the game
+def continue_game():
+    animate(coloured("\nPress Enter to continue...", "bold"))
+    input()  # Wait for user input to continue
+    clear_screen()
