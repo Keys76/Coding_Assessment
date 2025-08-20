@@ -32,7 +32,11 @@ def coloured(text, colour='green'):
         'code' : '\033[38;5;28m' ,
         'bold' : '\033[1m',
         'end': '\033[0m',
-        'back': '\033[48;5;224m]'
+        'back': '\033[48;5;224m]',
+        'testicles': '\033[48;5;34m]',
+        'black_back': '\033[48;5;0m]',
+        'grey_back': '\033[48;5;245m]',
+        'white_back': '\033[48;5;231m]'
     }
     return f"{colours.get(colour, '')}{text}{colours['end']}"
 
