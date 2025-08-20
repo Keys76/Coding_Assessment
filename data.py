@@ -1,5 +1,7 @@
 health = 100
 
+number = 0
+
 #list of cities with emojis and themes
 civilisations = [
     "Ancient Greece",
