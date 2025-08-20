@@ -3,7 +3,6 @@ import sys
 import time
 from data import * 
 
-
 # Function to clear the console screen
 def clear_screen():
     os.system ('cls' if os.name == 'nt' else 'clear')
@@ -70,9 +69,11 @@ def stats():
     print()
     print(coloured(missions[0], "cyan"))
 
-def statssss():
-    animate(coloured("Agent Information:", "bold"))
+# Function to display agent stats and mission details based on the current number
+def statssss(number):
+
     if number == 1:
+        animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[0]}", "cyan"))
         print(coloured(f"City: {cities[0]}", "cyan"))
         print(coloured(f"Date: {date[0]}", "cyan"))
@@ -80,6 +81,7 @@ def statssss():
         print()
         print(coloured(missions[0], "cyan"))
     elif number == 2:
+        animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[1]}", "cyan"))
         print(coloured(f"City: {cities[1]}", "cyan"))
         print(coloured(f"Date: {date[1]}", "cyan"))
@@ -87,15 +89,59 @@ def statssss():
         print()
         print(coloured(missions[1], "cyan"))  
     elif number == 3:
+        animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[2]}", "cyan"))
         print(coloured(f"City: {cities[2]}", "cyan"))
         print(coloured(f"Date: {date[2]}", "cyan"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[2], "cyan"))
-         
+    elif number ==4:
+        animate(coloured("Agent Information:", "bold"))
+        print(coloured(f"\nLocation: {civilisations[3]}", "cyan"))
+        print(coloured(f"City: {cities[3]}", "cyan"))
+        print(coloured(f"Date: {date[3]}", "cyan"))
+        animate(coloured("\nMission Objective:", "bold"))
+        print()
+        print(coloured(missions[3], "cyan"))
+    elif number == 5:
+        animate(coloured("Agent Information:", "bold"))
+        print(coloured(f"\nLocation: {civilisations[4]}", "cyan"))
+        print(coloured(f"City: {cities[4]}", "cyan"))
+        print(coloured(f"Date: {date[4]}", "cyan"))
+        animate(coloured("\nMission Objective:", "bold"))
+        print()
+        print(coloured(missions[4], "cyan"))
+    elif number == 6:
+        animate(coloured("Agent Information:", "bold"))
+        print(coloured(f"\nLocation: {civilisations[5]}", "cyan"))
+        print(coloured(f"City: {cities[5]}", "cyan"))
+        print(coloured(f"Date: {date[5]}", "cyan"))
+        animate(coloured("\nMission Objective:", "bold"))
+        print()
+        print(coloured(missions[5], "cyan"))
+    animate(coloured(f"\nItems:", "bold"))
+    print()
+    for i in items:
+        print(coloured(i, "cyan"))
 
+# Function to display a shield graphic
+def shield():
+    print(coloured("                         ","back"))
 
+    print(coloured("         ","back"),coloured("     ","black_back"),coloured("         ","back"))
+    print(coloured("    ","back"),coloured("   ","black_back"),coloured("       ","t"),coloured("   ","black_back"),coloured("    ","back"))
 
+    print(coloured("  ","back"),coloured(" ","black_back"),coloured("               ","t"),coloured(" ","black_back"),coloured("  ","back"))
+    print(coloured("  ","back"),coloured(" ","black_back"),coloured("               ","t"),coloured(" ","black_back"),coloured("  ","back"))
+    print(coloured("  ","back"),coloured(" ","black_back"),coloured("               ","t"),coloured(" ","black_back"),coloured("  ","back"))
+    print(coloured("  ","back"),coloured(" ","black_back"),coloured("               ","t"),coloured(" ","black_back"),coloured("  ","back"))
 
+    print(coloured("    ","back"),coloured(" ","black_back"),coloured("           ","t"),coloured(" ","black_back"),coloured("    ","back"))
+    print(coloured("    ","back"),coloured(" ","black_back"),coloured("           ","t"),coloured(" ","black_back"),coloured("    ","back"))
 
+    print(coloured("      ","back"),coloured(" ","black_back"),coloured("       ","t"),coloured(" ","black_back"),coloured("      ","back"))
+    print(coloured("       ","back"),coloured(" ","black_back"),coloured("     ","t"),coloured(" ","black_back"),coloured("       ","back"))
+
+    print(coloured("          ","back"),coloured("   ","black_back"),coloured("          ","back"))
+    print(coloured("                         ","back"))
