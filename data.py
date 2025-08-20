@@ -1,6 +1,5 @@
-health = 100
 
-#list of cities with emojis and themes
+# List of civilisations in the game
 civilisations = [
     "Ancient Greece",
     "Ancient China",
@@ -10,8 +9,7 @@ civilisations = [
     "Vikings"
 ]
 
-# Create variables for the city
-
+# List of cities, dates, items, and missions for the game
 cities = [
     "Thebes",
     "Yangtze River Basin",
@@ -21,6 +19,7 @@ cities = [
     "Norway",
 ]
 
+# Dates corresponding to the cities
 date = [
     "429 BCE",
     "3001 BCE",
@@ -30,6 +29,7 @@ date = [
     "999 CE"
 ]
 
+# List of items available in the game
 items = [
     "Time Beacon 108",
     "Bottle of Water",
@@ -39,6 +39,7 @@ items = [
     "One set of rations"
 ]
 
+# List of missions corresponding to the cities
 missions = [
     "Find the sphinx who is reigning terror over the city of Thebes, you must answer its riddle to pass.",
     "mission 2",
