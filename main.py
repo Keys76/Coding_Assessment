@@ -19,6 +19,12 @@ stats(number, health)
 # Prompt the user to continue the game
 continue_game()
 
+animate(coloured("🏛 Ancient Greece 🔱", "bold"))
+print()
+print(coloured(
+    "You look around and see tall stone walls and crowded houses behind them. The streets look quiet, with fewer people than you would expect for a big city. "
+    "\nMany shops are closed, and travelers seem nervous. Outside the gates, the Sphinx waits, keeping trade and visitors away.","cyan"
+    ))
 
 
 
@@ -26,5 +32,6 @@ continue_game()
 
 
 
+ 
 
 
