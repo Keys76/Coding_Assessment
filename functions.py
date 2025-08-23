@@ -38,7 +38,8 @@ def coloured(text, colour='green'):
         'black_back': '\033[48;5;0m',
         'grey_back': '\033[48;5;245m',
         'white_back': '\033[48;5;231m',
-        'shadow': '\033[48;5;20m'
+        'plant': '\033[48;5;22m',
+        'sky' : '\033[48;5;45m'
     }
     return f"{colours.get(colour, '')}{text}{colours['end']}"
 
@@ -50,72 +51,71 @@ def introduction():
     clear_screen()
     animate(coloured("Complete", "code"))
     clear_wait()
-    animate(coloured("Message from commander:", "code"))
-    print(coloured("Agent 0712, you are our last hope to save the timeline.\nThere is something trapping the entire agency in a time loop.\nYou must track it down, following its path throughout history, and defeat it.\nWe are all counting on you to save us.", "code"))
-    time.sleep(10)
-    clear_screen()
+    animate(coloured("Message from commander:", "bold"))
+    print(coloured("\nAgent 0712, you are our last hope to save the timeline.\nThere is something trapping the entire agency in a time loop.\nYou must track it down, following its path throughout history, and defeat it.\nWe are all counting on you to save us.", "code"))
+    continue_game()
 
 # Function to display agent stats and mission details based on the current number
 def stats(number, health):
 
     if number == 1:
         animate(coloured("Agent Information:", "bold"))
-        print(coloured(f"\nLocation: {civilisations[0]}", "cyan"))
-        print(coloured(f"City: {cities[0]}", "cyan"))
-        print(coloured(f"Date: {date[0]}", "cyan"))
-        print(coloured(f"Health: {health}", "cyan"))
+        print(coloured(f"\nLocation: {civilisations[0]}", "code"))
+        print(coloured(f"City: {cities[0]}", "code"))
+        print(coloured(f"Date: {date[0]}", "code"))
+        print(coloured(f"Health: {health}", "code"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
-        print(coloured(missions[0], "cyan"))
+        print(coloured(missions[0], "code"))
     elif number == 2:
         animate(coloured("Agent Information:", "bold"))
-        print(coloured(f"\nLocation: {civilisations[1]}", "cyan"))
-        print(coloured(f"City: {cities[1]}", "cyan"))
-        print(coloured(f"Date: {date[1]}", "cyan"))
-        print(coloured(f"Health: {health}", "cyan"))
+        print(coloured(f"\nLocation: {civilisations[1]}", "code"))
+        print(coloured(f"City: {cities[1]}", "code"))
+        print(coloured(f"Date: {date[1]}", "code"))
+        print(coloured(f"Health: {health}", "code"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
-        print(coloured(missions[1], "cyan"))  
+        print(coloured(missions[1], "code"))  
     elif number == 3:
         animate(coloured("Agent Information:", "bold"))
-        print(coloured(f"\nLocation: {civilisations[2]}", "cyan"))
-        print(coloured(f"City: {cities[2]}", "cyan"))
-        print(coloured(f"Date: {date[2]}", "cyan"))
-        print(coloured(f"Health: {health}", "cyan"))
+        print(coloured(f"\nLocation: {civilisations[2]}", "code"))
+        print(coloured(f"City: {cities[2]}", "code"))
+        print(coloured(f"Date: {date[2]}", "code"))
+        print(coloured(f"Health: {health}", "code"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
-        print(coloured(missions[2], "cyan"))
+        print(coloured(missions[2], "code"))
     elif number ==4:
         animate(coloured("Agent Information:", "bold"))
-        print(coloured(f"\nLocation: {civilisations[3]}", "cyan"))
-        print(coloured(f"City: {cities[3]}", "cyan"))
-        print(coloured(f"Date: {date[3]}", "cyan"))
-        print(coloured(f"Health: {health}", "cyan"))
+        print(coloured(f"\nLocation: {civilisations[3]}", "code"))
+        print(coloured(f"City: {cities[3]}", "code"))
+        print(coloured(f"Date: {date[3]}", "code"))
+        print(coloured(f"Health: {health}", "code"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
-        print(coloured(missions[3], "cyan"))
+        print(coloured(missions[3], "code"))
     elif number == 5:
         animate(coloured("Agent Information:", "bold"))
-        print(coloured(f"\nLocation: {civilisations[4]}", "cyan"))
-        print(coloured(f"City: {cities[4]}", "cyan"))
-        print(coloured(f"Date: {date[4]}", "cyan"))
-        print(coloured(f"Health: {health}", "cyan"))
+        print(coloured(f"\nLocation: {civilisations[4]}", "code"))
+        print(coloured(f"City: {cities[4]}", "code"))
+        print(coloured(f"Date: {date[4]}", "code"))
+        print(coloured(f"Health: {health}", "code"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
-        print(coloured(missions[4], "cyan"))
+        print(coloured(missions[4], "code"))
     elif number == 6:
         animate(coloured("Agent Information:", "bold"))
-        print(coloured(f"\nLocation: {civilisations[5]}", "cyan"))
-        print(coloured(f"City: {cities[5]}", "cyan"))
-        print(coloured(f"Date: {date[5]}", "cyan"))
-        print(coloured(f"Health: {health}", "cyan"))
+        print(coloured(f"\nLocation: {civilisations[5]}", "code"))
+        print(coloured(f"City: {cities[5]}", "code"))
+        print(coloured(f"Date: {date[5]}", "code"))
+        print(coloured(f"Health: {health}", "code"))
         animate(coloured("\nMission Objective:", "bold"))
         print()
-        print(coloured(missions[5], "cyan"))
+        print(coloured(missions[5], "code"))
     animate(coloured(f"\nItems:", "bold"))
     print()
     for i in items:
-        print(coloured(i, "cyan"))
+        print(coloured(i, "code"))
 
 # Function to display a shield graphic
 def shield():
@@ -143,3 +143,41 @@ def continue_game():
     animate(coloured("\nPress Enter to continue...", "bold"))
     input()  # Wait for user input to continue
     clear_screen()
+
+def plant():
+    print()
+    print()
+    print(coloured("   ","t"))
+    clear_wait()
+    print()
+    print(coloured("   ","t"))
+    print(coloured("   ","t"))
+    clear_wait()
+    print(coloured("   ","t"))
+    print(coloured("   ","t"))
+    print(coloured("   ","t"))
+
+def plant2():
+    for i in range(16):
+        print(coloured("                 ","sky"))
+    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    clear_wait()
+    for i in range(15):
+        print(coloured("                 ","sky"))
+    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    clear_wait()
+    for i in range(14):
+        print(coloured("                 ","sky"))
+    print(coloured("  ","sky"),coloured("    ","plant"),coloured("         ","sky"))
+    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    clear_wait()
+    for i in range(13):
+        print(coloured("                 ","sky"))
+    print(coloured(" ","sky"),coloured("      ","plant"),coloured("        ","sky"))
+    print(coloured("  ","sky"),coloured("    ","plant"),coloured("         ","sky"))
+    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    
+
