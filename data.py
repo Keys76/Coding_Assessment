@@ -1,4 +1,4 @@
-
+from functions import *
 # List of civilisations in the game
 civilisations = [
     "Ancient Greece",
@@ -48,3 +48,4 @@ missions = [
     "mission 5",
     "mission 6"
 ]
+
