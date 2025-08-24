@@ -10,9 +10,6 @@ clear_screen()
 # Wait for a second before clearing the screen
 clear_wait()
 
-plant2()
-time.sleep(1000000)
-
 # Display the introduction message
 introduction()
 
@@ -40,6 +37,12 @@ animate(coloured(
     "The Sphinx's voice is low and steady: 'What walks on four legs in the morning, two legs at noon, and three legs in the evening?'"
     "\nShe watches you closely, waiting for your answer.","cyan"
 ))
+print(coloured("\nYou have 4 choices, choose wisely as it will determine your fate:", "bold"))
+animate(coloured("\n1: Dog", "cyan"))
+animate(coloured("2: Human", "cyan"))
+animate(coloured("3: Old Tree", "cyan"))
+animate(coloured("4: Bird", "cyan"))
+print(coloured("\nType the number that corresponds to your answer...", "bold"))
 
 
 
