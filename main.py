@@ -5,9 +5,33 @@ civilisation_number = 1
 health = 100
 riddle_answer = 0
 riddle_attempts = 0
-alive = True
 
-main()
+def main():
+    while True:
+        input_menu = menu()
+        if input_menu == "start":
+            clear_screen()
+            alive = game_loop()
+            if alive == "dead":
+                print(coloured("GAME OVER","red"))
+                main()
+        elif input_menu == "instructions":
+            clear_screen()
+            print(coloured("--------------- INSTRUCTIONS ---------------","bold"))
+            animate(coloured("\nObjective:","bold"))
+            print(coloured("\n. Travel through different ancient civilisations to complete missions and restore the timeline.","code"))
+            print(coloured(". Solve puzzles, make choices, and overcome challenges to progress.","code"))
+            animate(coloured("\nControls:","bold"))
+            print(coloured("\n. Input your choices by typing the corresponding number or word and pressing Enter.","code"))
+            print(coloured(". Follow on-screen prompts to navigate through the game.","code"))
+            animate(coloured("\nGameplay Tips:","bold"))
+            print(coloured("\n. Be careful with choices — some paths may end your journey","code"))
+            print(coloured(". Completing missions in each civilization repairs the timeline","code"))
+            continue_game()
+            main()
+        else:
+            clear_screen()
+            main()
 
 def game_loop():
     # Clear the screen before starting the animation
@@ -71,7 +95,7 @@ def game_loop():
             animate(coloured("\nThe Sphinx's lips curl into a cruel smile. “Wrong,” she hisses, stepping closer. Her wings spread wide as the ground trembles with her power.","cyan"))
             animate(coloured("The air fills with dread. With a swift motion, she strikes you down. Darkness engulfs you as you fall to the ground...","cyan"))
             riddle_attempts = riddle_attempts + 1
-            alive = False
+            return "dead"
         # If the input is invalid, prompt the user to enter a valid number
         else:
             animate(coloured("\nInvalid input. Please enter a number between 1 and 4.", "red"))
@@ -89,7 +113,7 @@ def game_loop():
             print(coloured("4: Bird", "cyan"))
             riddle_answer =int(input(coloured("\nType the number that corresponds to your answer and press enter...", "bold")))
 
-
+main()
 
 
 
