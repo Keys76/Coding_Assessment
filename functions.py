@@ -3,6 +3,7 @@ import os
 import sys
 import time
 from data import * 
+from main import alive, game_loop
 
 # Function to clear the console screen
 def clear_screen():
@@ -168,5 +169,45 @@ def plant():
     print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
     print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
 
+# Function to display the game menu and handle user input
 def menu():
+    print(coloured("----------------- THE TIMEKEEPER'S MISSION ----------------","bold"))
+    print(coloured("\nStart New Game: Type 'start' and press enter","code"))
+    print(coloured("\nInstructions: Type 'instructions' and press enter","code"))
+    input_menu = input(coloured("\nType here: ","bold")).lower().strip()
+    return input_menu
+
+
+def main():
+    while True:
+        input_menu = menu()
+        if input_menu == "start":
+            clear_screen()
+            if alive == True:
+                game_loop()
+            else:
+                clear_screen()
+                print(coloured("GAME OVER","red"))
+                main() 
+        elif input_menu == "instructions":
+            clear_screen()
+            print(coloured("--------------- INSTRUCTIONS ---------------","bold"))
+            animate(coloured("\nObjective:","bold"))
+            print(coloured("\n. Travel through different ancient civilisations to complete missions and restore the timeline.","code"))
+            print(coloured(". Solve puzzles, make choices, and overcome challenges to progress.","code"))
+            animate(coloured("\nControls:","bold"))
+            print(coloured("\n. Input your choices by typing the corresponding number or word and pressing Enter.","code"))
+            print(coloured(". Follow on-screen prompts to navigate through the game.","code"))
+            animate(coloured("\nGameplay Tips:","bold"))
+            print(coloured("\n. Be careful with choices — some paths may end your journey","code"))
+            print(coloured(". Completing missions in each civilization repairs the timeline","code"))
+            continue_game()
+            main()
+        else:
+            clear_screen()
+            main()
+
+
+
+
 
