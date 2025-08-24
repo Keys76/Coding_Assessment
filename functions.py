@@ -56,9 +56,9 @@ def introduction():
     continue_game()
 
 # Function to display agent stats and mission details based on the current number
-def stats(number, health):
+def stats(civilasion_number, health):
 
-    if number == 1:
+    if civilasion_number == 1:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[0]}", "code"))
         print(coloured(f"City: {cities[0]}", "code"))
@@ -67,7 +67,7 @@ def stats(number, health):
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[0], "code"))
-    elif number == 2:
+    elif civilasion_number == 2:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[1]}", "code"))
         print(coloured(f"City: {cities[1]}", "code"))
@@ -76,7 +76,7 @@ def stats(number, health):
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[1], "code"))  
-    elif number == 3:
+    elif civilasion_number == 3:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[2]}", "code"))
         print(coloured(f"City: {cities[2]}", "code"))
@@ -85,7 +85,7 @@ def stats(number, health):
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[2], "code"))
-    elif number ==4:
+    elif civilasion_number ==4:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[3]}", "code"))
         print(coloured(f"City: {cities[3]}", "code"))
@@ -94,7 +94,7 @@ def stats(number, health):
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[3], "code"))
-    elif number == 5:
+    elif civilasion_number == 5:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[4]}", "code"))
         print(coloured(f"City: {cities[4]}", "code"))
@@ -103,7 +103,7 @@ def stats(number, health):
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[4], "code"))
-    elif number == 6:
+    elif civilasion_number == 6:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[5]}", "code"))
         print(coloured(f"City: {cities[5]}", "code"))
@@ -144,20 +144,8 @@ def continue_game():
     input()  # Wait for user input to continue
     clear_screen()
 
+# Function to display a growing plant animation
 def plant():
-    print()
-    print()
-    print(coloured("   ","t"))
-    clear_wait()
-    print()
-    print(coloured("   ","t"))
-    print(coloured("   ","t"))
-    clear_wait()
-    print(coloured("   ","t"))
-    print(coloured("   ","t"))
-    print(coloured("   ","t"))
-
-def plant2():
     for i in range(16):
         print(coloured("                 ","sky"))
     print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
@@ -179,5 +167,6 @@ def plant2():
     print(coloured("  ","sky"),coloured("    ","plant"),coloured("         ","sky"))
     print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
     print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
-    
+
+def menu():
 
