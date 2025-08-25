@@ -1,20 +1,34 @@
 import time
 from functions import *
 from data import *
-civilisation_number = 1
-health = 100
-riddle_answer = 0
-riddle_attempts = 0
 
 def main():
+    civilisation_number = 1
+    health = 100
     while True:
-        input_menu = menu()
-        if input_menu == "start":
+        clear_screen()
+        input_menu = menu(civilisation_number)
+        if input_menu == "start" or input_menu == "continue":
+            if input_menu == "start":
+                civilisation_number = 1
+                health = 100
             clear_screen()
-            alive = game_loop()
+            alive = game_loop(civilisation_number, health)
             if alive == "dead":
-                print(coloured("GAME OVER","red"))
-                main()
+                clear_screen()
+                print(coloured("\nGAME OVER","red"))
+                time.sleep(1)
+                continue
+            else:
+                civilisation_number = civilisation_number + 1
+                if civilisation_number > 6:
+                    clear_screen()
+                    print(coloured("Message from commander...","bold"))
+                    print(coloured("Congratulations Agent 0712, you have successfully completed all missions and restored the timeline.","code"))
+                    break
+                else:
+                    print(coloured(f"Congratulations you have completed the mission in {civilisations[civilisation_number-2]}","code"))
+                    clear_wait()
         elif input_menu == "instructions":
             clear_screen()
             print(coloured("--------------- INSTRUCTIONS ---------------","bold"))
@@ -28,20 +42,21 @@ def main():
             print(coloured("\n. Be careful with choices — some paths may end your journey","code"))
             print(coloured(". Completing missions in each civilization repairs the timeline","code"))
             continue_game()
-            main()
+            menu(civilisation_number)
         else:
             clear_screen()
-            main()
+            menu(civilisation_number)
 
-def game_loop():
+def game_loop(civilisation_number, health):
+    print("Level" , civilisation_number)
+    riddle_attempts = 0
+    time.sleep(2)
+
     # Clear the screen before starting the animation
     clear_screen()
 
     # Wait for a second before clearing the screen
     clear_wait()
-
-    # Display the menu
-    menu()
 
     # Display the introduction message
     introduction()
@@ -55,19 +70,19 @@ def game_loop():
     # First Mission - Ancient Greece
     print(coloured("🏛  Ancient Greece 🔱", "bold"))
     print()
-    animate(coloured(
+    print(coloured(
         "You look around and see tall stone walls and crowded houses behind them. The streets look quiet, with fewer people than you would expect for a big city. "
         "\nMany shops are closed, and travelers seem nervous. Outside the gates, the Sphinx waits, keeping trade and visitors away.","cyan"
         ))
     print()
-    animate(coloured(
+    print(coloured(
         "As you leave the quiet streets and walk toward the gates, the Sphinx comes into view. She sits on a rock by the road, her sharp eyes fixed on you. "
         "\nRising to block the way, she spreads her wings and declares: Answer my riddle, or you shall not pass.","cyan"
     ))
     continue_game()
     print(coloured("🏛  Ancient Greece 🔱", "bold"))
     print()
-    animate(coloured(
+    print(coloured(
         "The Sphinx's voice is low and steady: 'What walks on four legs in the morning, two legs at noon, and three legs in the evening?'"
         "\nShe watches you closely, waiting for your answer.","cyan"
     ))
@@ -88,6 +103,7 @@ def game_loop():
             "\nThe people of Thebes are freed at last","cyan"))
             continue_game()
             riddle_attempts = riddle_attempts + 1
+            return "win"
         # If the answer is incorrect, provide a different outcome
         elif riddle_answer == 1 or riddle_answer == 3 or riddle_answer == 4:
             clear_wait()
@@ -112,7 +128,7 @@ def game_loop():
             print(coloured("3: Old Tree", "cyan"))
             print(coloured("4: Bird", "cyan"))
             riddle_answer =int(input(coloured("\nType the number that corresponds to your answer and press enter...", "bold")))
-
+    
 main()
 
 

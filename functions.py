@@ -4,6 +4,7 @@ import sys
 import time
 from data import * 
 
+
 # Function to clear the console screen
 def clear_screen():
     os.system ('cls' if os.name == 'nt' else 'clear')
@@ -56,9 +57,9 @@ def introduction():
     continue_game()
 
 # Function to display agent stats and mission details based on the current number
-def stats(civilasion_number, health):
+def stats(civilisation_number, health):
 
-    if civilasion_number == 1:
+    if civilisation_number == 1:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[0]}", "code"))
         print(coloured(f"City: {cities[0]}", "code"))
@@ -67,7 +68,7 @@ def stats(civilasion_number, health):
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[0], "code"))
-    elif civilasion_number == 2:
+    elif civilisation_number == 2:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[1]}", "code"))
         print(coloured(f"City: {cities[1]}", "code"))
@@ -76,7 +77,7 @@ def stats(civilasion_number, health):
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[1], "code"))  
-    elif civilasion_number == 3:
+    elif civilisation_number == 3:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[2]}", "code"))
         print(coloured(f"City: {cities[2]}", "code"))
@@ -85,7 +86,7 @@ def stats(civilasion_number, health):
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[2], "code"))
-    elif civilasion_number ==4:
+    elif civilisation_number ==4:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[3]}", "code"))
         print(coloured(f"City: {cities[3]}", "code"))
@@ -94,7 +95,7 @@ def stats(civilasion_number, health):
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[3], "code"))
-    elif civilasion_number == 5:
+    elif civilisation_number == 5:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[4]}", "code"))
         print(coloured(f"City: {cities[4]}", "code"))
@@ -103,7 +104,7 @@ def stats(civilasion_number, health):
         animate(coloured("\nMission Objective:", "bold"))
         print()
         print(coloured(missions[4], "code"))
-    elif civilasion_number == 6:
+    elif civilisation_number == 6:
         animate(coloured("Agent Information:", "bold"))
         print(coloured(f"\nLocation: {civilisations[5]}", "code"))
         print(coloured(f"City: {cities[5]}", "code"))
@@ -169,10 +170,23 @@ def plant():
     print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
 
 # Function to display the game menu and handle user input
-def menu():
-    print(coloured("----------------- THE TIMEKEEPER'S MISSION ----------------","bold"))
-    print(coloured("\nStart New Game: Type 'start' and press enter","code"))
-    print(coloured("\nInstructions: Type 'instructions' and press enter","code"))
+def menu(civilisation_number):
+
+    menu_options = {
+        "start": "\nStart New Game: Type 'start' and press enter",
+        "instructions": "\nInstructions: Type 'instructions' and press enter",
+        "continue": f"\nContinue to Level {civilisation_number} : Type 'continue' and press enter"
+    }
+
+    clear_screen
+    print(coloured("\n----------------- THE TIMEKEEPER'S MISSION ----------------","bold"))
+
+    print(coloured(menu_options["start"],"code"))
+    print(coloured(menu_options["instructions"],"code"))
+
+    if civilisation_number > 1:
+        print(coloured(menu_options["continue"],"code"))
+        
     input_menu = input(coloured("\nType here: ","bold")).lower().strip()
     return input_menu
 

@@ -6,7 +6,7 @@ civilisations = [
     "Ancient India",
     "Ancient Rome",
     "Ancient Egypt",
-    "Vikings"
+    "Vikings",
 ]
 
 # List of cities, dates, items, and missions for the game
