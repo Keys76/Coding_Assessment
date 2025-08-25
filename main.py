@@ -1,19 +1,22 @@
 import time
-from functions import *
-from data import *
+from functions import clear_screen, clear_wait, coloured, animate, continue_game, shield, plant, stats, introduction, menu
+from data import civilisations_dict, items
 
 def main():
     civilisation_number = 1
-    health = 100
+    agent = {}
     while True:
         clear_screen()
         input_menu = menu(civilisation_number)
         if input_menu == "start" or input_menu == "continue":
             if input_menu == "start":
                 civilisation_number = 1
-                health = 100
+                agent = {
+                    "health": 100,
+                    "inventory": items.copy()
+                }
             clear_screen()
-            alive = game_loop(civilisation_number, health)
+            alive, agent = game_loop(civilisation_number, agent)
             if alive == "dead":
                 clear_screen()
                 print(coloured("\nGAME OVER","red"))
@@ -27,7 +30,7 @@ def main():
                     print(coloured("Congratulations Agent 0712, you have successfully completed all missions and restored the timeline.","code"))
                     break
                 else:
-                    print(coloured(f"Congratulations you have completed the mission in {civilisations[civilisation_number-2]}","code"))
+                    animate(coloured(f"Congratulations you have completed the mission in {civilisations_dict[civilisation_number-1]['civilisation']}","code"))
                     clear_wait()
         elif input_menu == "instructions":
             clear_screen()
@@ -47,7 +50,7 @@ def main():
             clear_screen()
             menu(civilisation_number)
 
-def game_loop(civilisation_number, health):
+def game_loop(civilisation_number, agent):
     print("Level" , civilisation_number)
     riddle_attempts = 0
     time.sleep(2)
@@ -62,7 +65,7 @@ def game_loop(civilisation_number, health):
     introduction()
 
     # Display the agent stats and mission details
-    stats(civilisation_number, health)
+    stats(civilisation_number, agent)
 
     # Prompt the user to continue the game
     continue_game()
@@ -103,7 +106,7 @@ def game_loop(civilisation_number, health):
             "\nThe people of Thebes are freed at last","cyan"))
             continue_game()
             riddle_attempts = riddle_attempts + 1
-            return "win"
+            return "win", agent
         # If the answer is incorrect, provide a different outcome
         elif riddle_answer == 1 or riddle_answer == 3 or riddle_answer == 4:
             clear_wait()
@@ -111,7 +114,7 @@ def game_loop(civilisation_number, health):
             animate(coloured("\nThe Sphinx's lips curl into a cruel smile. “Wrong,” she hisses, stepping closer. Her wings spread wide as the ground trembles with her power.","cyan"))
             animate(coloured("The air fills with dread. With a swift motion, she strikes you down. Darkness engulfs you as you fall to the ground...","cyan"))
             riddle_attempts = riddle_attempts + 1
-            return "dead"
+            return "dead", agent
         # If the input is invalid, prompt the user to enter a valid number
         else:
             animate(coloured("\nInvalid input. Please enter a number between 1 and 4.", "red"))
