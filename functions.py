@@ -40,7 +40,9 @@ def coloured(text, colour='green'):
         'grey_back': '\033[48;5;245m',
         'white_back': '\033[48;5;231m',
         'plant': '\033[48;5;22m',
-        'sky' : '\033[48;5;45m'
+        'sky' : '\033[48;5;45m',
+        'rice' : '\033[48;5;220m'
+
     }
     return f"{colours.get(colour, '')}{text}{colours['end']}"
 
@@ -102,26 +104,55 @@ def continue_game():
 # Function to display a growing plant animation
 def plant():
     for i in range(16):
-        print(coloured("                 ","sky"))
-    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+        print(coloured("                  ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
     clear_wait()
     for i in range(15):
-        print(coloured("                 ","sky"))
-    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
-    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+        print(coloured("                  ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
     clear_wait()
     for i in range(14):
-        print(coloured("                 ","sky"))
-    print(coloured("  ","sky"),coloured("    ","plant"),coloured("         ","sky"))
-    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
-    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+        print(coloured("                  ","sky"))
+    print(coloured("   ","sky"),coloured("    ","plant"),coloured("         ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
     clear_wait()
     for i in range(13):
-        print(coloured("                 ","sky"))
-    print(coloured(" ","sky"),coloured("      ","plant"),coloured("        ","sky"))
-    print(coloured("  ","sky"),coloured("    ","plant"),coloured("         ","sky"))
-    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
-    print(coloured("  ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+        print(coloured("                  ","sky"))
+    print(coloured("  ","sky"),coloured("      ","plant"),coloured("        ","sky"))
+    print(coloured("   ","sky"),coloured("    ","plant"),coloured("         ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    clear_wait()
+    for i in range(12):
+        print(coloured("                  ","sky"))
+    print(coloured(" ","sky"),coloured("    ","plant"),coloured("           ","sky"))
+    print(coloured("  ","sky"),coloured("      ","plant"),coloured("        ","sky"))
+    print(coloured("   ","sky"),coloured("    ","plant"),coloured("         ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    clear_wait()
+    for i in range(11):
+        print(coloured("                  ","sky"))
+    print(coloured("   ","sky"),coloured("  ","plant"),coloured("           ","sky"))
+    print(coloured(" ","sky"),coloured("    ","plant"),coloured("           ","sky"))
+    print(coloured("  ","sky"),coloured("      ","plant"),coloured("        ","sky"))
+    print(coloured("   ","sky"),coloured("    ","plant"),coloured("         ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    clear_wait()
+    for i in range(10):
+        print(coloured("                  ","sky"))
+    print(coloured("   ","sky"),coloured("  ","plant"),coloured("           ","sky"))
+    print(coloured(" ","sky"),coloured("    ","plant"),coloured("           ","sky"))
+    print(coloured("  ","sky"),coloured("      ","plant"),coloured("        ","sky"))
+    print(coloured("   ","sky"),coloured("    ","plant"),coloured("         ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    clear_wait()
+
+  
 
 # Function to display the game menu and handle user input
 def menu(civilisation_number):
