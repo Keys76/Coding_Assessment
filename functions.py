@@ -2,7 +2,7 @@
 import os
 import sys
 import time
-from data import * 
+from data import items, civilisations_dict
 
 
 # Function to clear the console screen
@@ -57,65 +57,19 @@ def introduction():
     continue_game()
 
 # Function to display agent stats and mission details based on the current number
-def stats(civilisation_number, health):
+def stats(civilisation_number, agent):
 
-    if civilisation_number == 1:
-        animate(coloured("Agent Information:", "bold"))
-        print(coloured(f"\nLocation: {civilisations[0]}", "code"))
-        print(coloured(f"City: {cities[0]}", "code"))
-        print(coloured(f"Date: {date[0]}", "code"))
-        print(coloured(f"Health: {health}", "code"))
-        animate(coloured("\nMission Objective:", "bold"))
-        print()
-        print(coloured(missions[0], "code"))
-    elif civilisation_number == 2:
-        animate(coloured("Agent Information:", "bold"))
-        print(coloured(f"\nLocation: {civilisations[1]}", "code"))
-        print(coloured(f"City: {cities[1]}", "code"))
-        print(coloured(f"Date: {date[1]}", "code"))
-        print(coloured(f"Health: {health}", "code"))
-        animate(coloured("\nMission Objective:", "bold"))
-        print()
-        print(coloured(missions[1], "code"))  
-    elif civilisation_number == 3:
-        animate(coloured("Agent Information:", "bold"))
-        print(coloured(f"\nLocation: {civilisations[2]}", "code"))
-        print(coloured(f"City: {cities[2]}", "code"))
-        print(coloured(f"Date: {date[2]}", "code"))
-        print(coloured(f"Health: {health}", "code"))
-        animate(coloured("\nMission Objective:", "bold"))
-        print()
-        print(coloured(missions[2], "code"))
-    elif civilisation_number ==4:
-        animate(coloured("Agent Information:", "bold"))
-        print(coloured(f"\nLocation: {civilisations[3]}", "code"))
-        print(coloured(f"City: {cities[3]}", "code"))
-        print(coloured(f"Date: {date[3]}", "code"))
-        print(coloured(f"Health: {health}", "code"))
-        animate(coloured("\nMission Objective:", "bold"))
-        print()
-        print(coloured(missions[3], "code"))
-    elif civilisation_number == 5:
-        animate(coloured("Agent Information:", "bold"))
-        print(coloured(f"\nLocation: {civilisations[4]}", "code"))
-        print(coloured(f"City: {cities[4]}", "code"))
-        print(coloured(f"Date: {date[4]}", "code"))
-        print(coloured(f"Health: {health}", "code"))
-        animate(coloured("\nMission Objective:", "bold"))
-        print()
-        print(coloured(missions[4], "code"))
-    elif civilisation_number == 6:
-        animate(coloured("Agent Information:", "bold"))
-        print(coloured(f"\nLocation: {civilisations[5]}", "code"))
-        print(coloured(f"City: {cities[5]}", "code"))
-        print(coloured(f"Date: {date[5]}", "code"))
-        print(coloured(f"Health: {health}", "code"))
-        animate(coloured("\nMission Objective:", "bold"))
-        print()
-        print(coloured(missions[5], "code"))
+    animate(coloured("Agent Information:", "bold"))
+    print(coloured(f"\nLocation: {civilisations_dict[civilisation_number]['civilisation']}", "code"))
+    print(coloured(f"City: {civilisations_dict[civilisation_number]['city']}", "code"))
+    print(coloured(f"Date: {civilisations_dict[civilisation_number]['date']}", "code"))
+    print(coloured(f"Health: {agent['health']}", "code"))
+    animate(coloured("\nMission Objective:", "bold"))
+    print()
+    print(coloured(civilisations_dict[civilisation_number]['mission'], "code"))
     animate(coloured(f"\nItems:", "bold"))
     print()
-    for i in items:
+    for i in agent['inventory']:
         print(coloured(i, "code"))
 
 # Function to display a shield graphic
