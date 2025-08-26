@@ -17,13 +17,13 @@ def clear_wait():
 
 # Function to animate text output with a delay
 def animate(text, delay=0.05):
-    for c in text:
-        sys.stdout.write(c)
+    for char in text:
+        sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(delay)
     print()
 
-# Function to return coloured text for terminal output
+# Function to return coloured text for terminal output (AI USAGE)
 def coloured(text, colour='green'):
     colours = {
         'red': '\033[91m',
