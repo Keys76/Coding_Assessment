@@ -155,11 +155,12 @@ def plant():
     print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
     print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
     print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    clear_wait()
 
     # 7
     for i in range(10):
         print(coloured("                  ","sky"))
-    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
     print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
     print(coloured(" ","sky")+coloured("     ","plant")+coloured("            ","sky"))
     print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
@@ -172,7 +173,7 @@ def plant():
     for i in range(9):
         print(coloured("                  ","sky"))
     print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
-    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
     print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
     print(coloured(" ","sky")+coloured("     ","plant")+coloured("            ","sky"))
     print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
@@ -186,7 +187,7 @@ def plant():
         print(coloured("                  ","sky"))
     print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
     print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
-    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
     print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
     print(coloured(" ","sky")+coloured("     ","plant")+coloured("            ","sky"))
     print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
@@ -198,10 +199,10 @@ def plant():
     # 10
     for i in range(7):
         print(coloured("                  ","sky"))
-    print(coloured(" ","sky")+coloured("     ","plant")+coloured("            ","sky"))
+    print(coloured(" ","sky")+coloured("         ","plant")+coloured("        ","sky"))
     print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
     print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
-    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
     print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
     print(coloured(" ","sky")+coloured("     ","plant")+coloured("            ","sky"))
     print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
@@ -213,11 +214,46 @@ def plant():
     # 11
     for i in range(6):
         print(coloured("                  ","sky"))
+    print(coloured("  ","sky")+coloured("       ","rice")+coloured("         ","sky"))
+    print(coloured(" ","sky")+coloured("         ","plant")+coloured("        ","sky"))
+    print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
+    print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
+    print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
     print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
     print(coloured(" ","sky")+coloured("     ","plant")+coloured("            ","sky"))
     print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
     print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
     print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    clear_wait()
+
+    # 12
+    for i in range(5):
+        print(coloured("                  ","sky"))
+    print(coloured("   ","sky")+coloured("     ","rice")+coloured("          ","sky"))
+    print(coloured("  ","sky")+coloured("       ","rice")+coloured("         ","sky"))
+    print(coloured(" ","sky")+coloured("         ","plant")+coloured("        ","sky"))
+    print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
+    print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
+    print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
+    print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
+    print(coloured(" ","sky")+coloured("     ","plant")+coloured("            ","sky"))
+    print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
+    print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    clear_wait()
+
+    # 13
+    for i in range(4):
+        print(coloured("                  ","sky"))
+    print(coloured("   ","sky")+coloured("     ","rice")+coloured("          ","sky"))
+    print(coloured("   ","sky")+coloured("     ","rice")+coloured("          ","sky"))
+    print(coloured("  ","sky")+coloured("       ","rice")+coloured("         ","sky"))
+    print(coloured(" ","sky")+coloured("         ","plant")+coloured("        ","sky"))
+    print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
+    print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
+    print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
     print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
     print(coloured(" ","sky")+coloured("     ","plant")+coloured("            ","sky"))
     print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
@@ -225,12 +261,6 @@ def plant():
     print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
     print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
 
-
-    
-
-
-
- 
 # Function to display the game menu and handle user input
 def menu(civilisation_number):
 
