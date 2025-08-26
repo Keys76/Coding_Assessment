@@ -182,7 +182,6 @@ def game_loop(civilisation_number, agent):
             print(coloured("Cost: 30 coins","green"))
             seed_trade = input("\nDo you want to accept this offer?(y/n)...")
             if seed_trade == "y":
-                agent["inventory"].append("10 seeds")
                 agent["coins"] = agent["coins"] - 30
                 clear_wait()
                 print(coloured("⛩️ Ancient China 🐉", "bold"))
@@ -199,7 +198,6 @@ def game_loop(civilisation_number, agent):
                     print(coloured("Cost: 15 coins","green"))
                     seed_trade = input("\nDo you want to accept this offer?(y/n)...")
                     if seed_trade == "y":
-                        agent["inventory"].append("5 seeds")
                         agent["coins"] = agent["coins"] - 15
                         clear_wait()
                         print(coloured("⛩️ Ancient China 🐉", "bold"))
@@ -216,7 +214,6 @@ def game_loop(civilisation_number, agent):
                             print(coloured("Cost: 20 coins","green"))
                             seed_trade = input("\nDo you want to accept this offer?(y/n)...")
                             if seed_trade == "y":
-                                agent["inventory"].append("20 seeds")
                                 agent["coins"] = agent["coins"] - 20
                                 clear_wait()
                                 print(coloured("⛩️ Ancient China 🐉", "bold"))
@@ -233,7 +230,6 @@ def game_loop(civilisation_number, agent):
                                     print(coloured("Cost: 35 coins","green"))
                                     seed_trade = input("\nDo you want to accept this offer?(y/n)...")
                                     if seed_trade == "y":
-                                        agent["inventory"].append("15 seeds")
                                         agent["coins"] = agent["coins"] - 35
                                         clear_wait()
                                         print(coloured("⛩️ Ancient China 🐉", "bold"))
@@ -250,7 +246,6 @@ def game_loop(civilisation_number, agent):
                                             print(coloured("Cost: 5 coins","green"))
                                             seed_trade = input("\nDo you want to accept this offer?(y/n)...")
                                             if seed_trade == "y":
-                                                agent["inventory"].append("50 seeds")
                                                 agent["coins"] = agent["coins"] - 5
                                                 clear_wait()
                                                 print(coloured("⛩️ Ancient China 🐉", "bold"))
@@ -280,17 +275,21 @@ def game_loop(civilisation_number, agent):
                 print()
                 print(coloured("Invalid input","red"))
 
-        clear_wait()
+        clear_screen()
         print(coloured("⛩️ Ancient China 🐉","bold"))
-        print(coloured("Inventory:","bold"))
         print()
-        for i in agent["inventory"]:
-            print(coloured(i,"code"))
-
+        print(coloured("You have enough seeds to start growing your rice plant","green"))
         continue_game()
-        print(coloured("⛩️ Ancient China 🐉","bold"))
-        print()
-        animate(coloured(""))
-                  
-plant()
+        plant()
+        time.sleep(3)
+        clear_screen()
+        agent["inventory"].append("Rice")
+        stats(civilisation_number, agent)
+        return "win", agent
+
+    elif civilisation_number == 3:
+        print("debug")
+
+               
+main()
 
