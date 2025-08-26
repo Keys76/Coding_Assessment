@@ -1,6 +1,6 @@
 import time
-from functions import clear_screen, clear_wait, coloured, animate, continue_game, shield, plant, stats, introduction, menu
-from data import civilisations_dict, items
+from functions import clear_screen, clear_wait, coloured, animate, continue_game, shield, plant, stats, introduction, menu, show_map, get_moves, play
+from data import civilisations_dict, items, game_map, directions
 
 def main():
     civilisation_number = 1
@@ -27,7 +27,7 @@ def main():
                 continue
             else:
                 civilisation_number = civilisation_number + 1
-                if civilisation_number > 6:
+                if civilisation_number > 4:
                     clear_screen()
                     print(coloured("Message from commander...","bold"))
                     print(coloured("Congratulations Agent 0712, you have successfully completed all missions and restored the timeline.","code"))
@@ -288,7 +288,8 @@ def game_loop(civilisation_number, agent):
         return "win", agent
 
     elif civilisation_number == 3:
-        print("debug")
+        print(coloured("⚜️ Ancient Rome 🌿","bold"))
+        
 
                
 main()
