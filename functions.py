@@ -104,58 +104,62 @@ def continue_game():
     input()  # Wait for user input to continue
     clear_screen()
 
-# Function to display a growing plant animation
+#Function to display a growing plant animation
 def plant():
+    # 1
     for i in range(16):
         print(coloured("                  ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
     clear_wait()
+
+    # 2
     for i in range(15):
         print(coloured("                  ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
     clear_wait()
+
+    # 3
     for i in range(14):
         print(coloured("                  ","sky"))
-    print(coloured("   ","sky"),coloured("    ","plant"),coloured("         ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
     clear_wait()
+
+    # 4
     for i in range(13):
         print(coloured("                  ","sky"))
-    print(coloured("  ","sky"),coloured("      ","plant"),coloured("        ","sky"))
-    print(coloured("   ","sky"),coloured("    ","plant"),coloured("         ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
+    print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
     clear_wait()
+
+    # 5
     for i in range(12):
         print(coloured("                  ","sky"))
-    print(coloured(" ","sky"),coloured("    ","plant"),coloured("           ","sky"))
-    print(coloured("  ","sky"),coloured("      ","plant"),coloured("        ","sky"))
-    print(coloured("   ","sky"),coloured("    ","plant"),coloured("         ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured(" ","sky")+coloured("     ","plant")+coloured("            ","sky"))
+    print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
+    print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
     clear_wait()
+
+    # 6
     for i in range(11):
         print(coloured("                  ","sky"))
-    print(coloured("   ","sky"),coloured("  ","plant"),coloured("           ","sky"))
-    print(coloured(" ","sky"),coloured("    ","plant"),coloured("           ","sky"))
-    print(coloured("  ","sky"),coloured("      ","plant"),coloured("        ","sky"))
-    print(coloured("   ","sky"),coloured("    ","plant"),coloured("         ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
+    print(coloured("   ","sky")+coloured("   ","plant")+coloured("            ","sky"))
+    print(coloured(" ","sky")+coloured("     ","plant")+coloured("            ","sky"))
+    print(coloured("  ","sky")+coloured("       ","plant")+coloured("         ","sky"))
+    print(coloured("   ","sky")+coloured("     ","plant")+coloured("          ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
+    print(coloured("   ","sky")+coloured("  ","plant")+coloured("             ","sky"))
     clear_wait()
-    for i in range(10):
-        print(coloured("                  ","sky"))
-    print(coloured("  ","sky"),coloured("    ","plant"),coloured("   ","sky"),coloured(" ","rice"),coloured("    ","sky"))
-    print(coloured("   ","sky"),coloured("  ","plant"),coloured("           ","sky"))
-    print(coloured(" ","sky"),coloured("    ","plant"),coloured("           ","sky"))
-    print(coloured("  ","sky"),coloured("      ","plant"),coloured("        ","sky"))
-    print(coloured("   ","sky"),coloured("    ","plant"),coloured("         ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
-    print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
-    clear_wait()
-    
+
+
+
+ 
 # Function to display the game menu and handle user input
 def menu(civilisation_number):
 
@@ -176,11 +180,5 @@ def menu(civilisation_number):
         
     input_menu = input(coloured("\nType here: ","bold")).lower().strip()
     return input_menu
-
-
-
-
-
-
 
 
