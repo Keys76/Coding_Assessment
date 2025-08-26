@@ -73,6 +73,9 @@ def stats(civilisation_number, agent):
     print()
     for i in agent['inventory']:
         print(coloured(i, "code"))
+    print()
+    print(coloured(f"Coins:","bold"))
+    print(coloured(f"\n{agent['coins']}","code"))
 
 # Function to display a shield graphic
 def shield():
