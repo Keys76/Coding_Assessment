@@ -134,19 +134,6 @@ def game_loop(civilisation_number, agent):
                 print(coloured("4: Bird", "cyan"))
                 riddle_answer =int(input(coloured("\nType the number that corresponds to your answer and press enter...", "bold")))
 
-
-plant()
-time.sleep(200000)
+    elif civilisation_number == 2:
+        
 main()
-
-
-
-
-
-
-
-
-
- 
-
-
