@@ -21,6 +21,7 @@ def main():
                 clear_screen()
                 print(coloured("\nGAME OVER","red"))
                 agent = {}
+                civilisation_number = 1
                 time.sleep(1)
                 continue
             else:
@@ -139,22 +140,26 @@ def game_loop(civilisation_number, agent):
 
         food_question = 0
         animate(coloured("ALERT","red"))
-        animate(coloured("\nAgent energy depleted: consume food"))
+        animate(coloured("\nAgent energy depleted: consume food","bold"))
 
         while food_question == 0: 
             food = input(coloured("\nDo you want to eat your rations?: y/n... ","bold"))
             if food == "y":
                 clear_screen
-                print(coloured("\nYou energy levels are replenished","bold"))
-                food_question = food_question + 1
+                animate(coloured("\nYou energy levels are replenished","bold"))
+                food_question = 1
             elif food == "n":
                 food_question = food_question + 1
                 return "dead", agent
             else:
                 animate(coloured("\nInvalid input","red"))
         
-        clear_wait
+        clear_screen
+        stats(civilisation_number, agent)
+        continue_game
         print(coloured("⛩️ Ancient China 🐉","bold"))
+        print(coloured("\nNow that you do not have any food in your inventory you will need to trade your coins with villagers here in the Yangtze River basin of Ancient China for seeds and water to grow your own food.","green"))
+
 
 main()
 
