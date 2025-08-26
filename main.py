@@ -152,6 +152,8 @@ def game_loop(civilisation_number, agent):
                 agent["inventory"].remove("One set of rations")
                 food_question = 1
             elif food == "n":
+                print(coloured("You died of hunger","red"))
+                continue_game
                 food_question = food_question + 1
                 return "dead", agent
             else:
@@ -163,17 +165,15 @@ def game_loop(civilisation_number, agent):
         print(coloured("⛩️ Ancient China 🐉","bold"))
         print(coloured(
             "\nNow that you do not have any food in your inventory you will need to trade your coins with villagers here in the Yangtze River basin of "
-            "\nAncient China for seeds and water to grow your own food.","green"
+            "\nAncient China for seeds to grow your own food.","green"
             ))
         print(coloured(
-            "\nThere are five villagers willing to trade seeds and five willing to trade water with you." 
+            "\nThere are five villagers willing to trade seeds with you." 
             "\nThey will each present their offer one by one and you can choose wether or not to accept it."
             "\nHowever if you choose to continue to the next offer, you will not be able to go back."
         ))
         continue_game()
         print(coloured("⛩️ Ancient China 🐉","bold"))
-        print()
-        animate(coloured("Seeds","bold"))
 
         # Villager 1
         while trade_counter == 0:
@@ -187,7 +187,7 @@ def game_loop(civilisation_number, agent):
                 clear_wait()
                 print(coloured("⛩️ Ancient China 🐉", "bold"))
                 print(coloured("\nTrade accepted"))
-                trade_counter = trade_counter + 1
+                trade_counter = 1
             elif seed_trade == "n":
                 clear_wait()
                 print(coloured("⛩️ Ancient China 🐉", "bold"))
@@ -204,7 +204,7 @@ def game_loop(civilisation_number, agent):
                         clear_wait()
                         print(coloured("⛩️ Ancient China 🐉", "bold"))
                         print(coloured("\nTrade accepted"))
-                        trade_counter
+                        trade_counter = 1
                     elif seed_trade == "n":
                         clear_wait()
                         print(coloured("⛩️ Ancient China 🐉", "bold"))
@@ -221,7 +221,7 @@ def game_loop(civilisation_number, agent):
                                 clear_wait()
                                 print(coloured("⛩️ Ancient China 🐉", "bold"))
                                 print(coloured("\nTrade accepted"))
-                                trade_counter = trade_counter + 1
+                                trade_counter = 1
                             elif seed_trade == "n":
                                 clear_wait()
                                 print(coloured("⛩️ Ancient China 🐉", "bold"))
@@ -238,7 +238,7 @@ def game_loop(civilisation_number, agent):
                                         clear_wait()
                                         print(coloured("⛩️ Ancient China 🐉", "bold"))
                                         print(coloured("\nTrade accepted"))
-                                        trade_counter = trade_counter + 1
+                                        trade_counter = 1
                                     elif seed_trade == "n":
                                         clear_wait()
                                         print(coloured("⛩️ Ancient China 🐉", "bold"))
@@ -255,14 +255,14 @@ def game_loop(civilisation_number, agent):
                                                 clear_wait()
                                                 print(coloured("⛩️ Ancient China 🐉", "bold"))
                                                 print(coloured("\nTrade accepted"))
-                                                trade_counter = trade_counter + 1
+                                                trade_counter = 1
                                             elif seed_trade == "n":
                                                 agent["inventory"].append("50 seeds")
                                                 agent["coins"] = agent["coins"] - 5
                                                 clear_wait()
                                                 print(coloured("⛩️ Ancient China 🐉", "bold"))
                                                 print(coloured("\nThe last offer will be taken by default"))
-                                                trade_counter = trade_counter +1                                  
+                                                trade_counter = 1                                  
                                             else:
                                                 print()
                                                 print(coloured("Invalid input","red"))                                  
@@ -281,9 +281,16 @@ def game_loop(civilisation_number, agent):
                 print(coloured("Invalid input","red"))
 
         clear_wait()
-        print(coloured("⛩️ Ancient China 🐉"))
-        stats(civilisation_number, agent)
-                  
+        print(coloured("⛩️ Ancient China 🐉","bold"))
+        print(coloured("Inventory:","bold"))
+        print()
+        for i in agent["inventory"]:
+            print(coloured(i,"code"))
 
+        continue_game()
+        print(coloured("⛩️ Ancient China 🐉","bold"))
+        print()
+        animate(coloured(""))
+                  
 main()
 
