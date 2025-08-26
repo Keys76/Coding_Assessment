@@ -145,7 +145,7 @@ def game_loop(civilisation_number, agent):
         while food_question == 0: 
             food = input(coloured("\nDo you want to eat your rations?: y/n... ","bold"))
             if food == "y":
-                clear_screen
+                clear_screen()
                 animate(coloured("\nYou energy levels are replenished","bold"))
                 food_question = 1
             elif food == "n":
@@ -154,9 +154,9 @@ def game_loop(civilisation_number, agent):
             else:
                 animate(coloured("\nInvalid input","red"))
         
-        clear_screen
+        clear_screen()
         stats(civilisation_number, agent)
-        continue_game
+        continue_game()
         print(coloured("⛩️ Ancient China 🐉","bold"))
         print(coloured("\nNow that you do not have any food in your inventory you will need to trade your coins with villagers here in the Yangtze River basin of Ancient China for seeds and water to grow your own food.","green"))
 
