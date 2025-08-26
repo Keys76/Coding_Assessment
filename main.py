@@ -285,6 +285,5 @@ def game_loop(civilisation_number, agent):
         stats(civilisation_number, agent)
                   
 
-
 main()
 
