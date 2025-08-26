@@ -10,6 +10,8 @@ clear_screen()
 # Wait for a second before clearing the screen
 clear_wait()
 
+shield()
+
 # Display the introduction message
 introduction()
 
