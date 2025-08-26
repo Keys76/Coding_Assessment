@@ -1,7 +1,7 @@
 
 civilisations_dict = {
     1: {"civilisation": "Ancient Greece", "city": "Thebes", "date": "429 BCE", "mission": "Find the sphinx who is reigning terror over the city of Thebes, you must answer its riddle to pass."},
-    2: {"civilisation": "Ancient China", "city": "Yangtze River Basin", "date": "3001 BCE", "mission": "mission 2"},
+    2: {"civilisation": "Ancient China", "city": "Yangtze River Basin", "date": "3001 BCE", "mission": "Trade with villagers to get seeds and water to grow a rice plant so you can replenish you supplies."},
     3: {"civilisation": "Ancient India", "city": "Palitaputra", "date": "1100 CE", "mission": "mission 3"},
     4: {"civilisation": "Ancient Rome", "city": "Rome", "date": "352 CE", "mission": "mision 4"},
     5: {"civilisation": "Ancient Egypt", "city": "Giza", "date": "2576 CE", "mission": "mission 5"},
@@ -15,6 +15,7 @@ items = [
     "First Aid Kit",
     "Flashlight",
     "Map",
-    "One set of rations"
+    "One set of rations",
+    "50 coins"
 ]
 

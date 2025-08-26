@@ -135,5 +135,17 @@ def game_loop(civilisation_number, agent):
                 riddle_answer =int(input(coloured("\nType the number that corresponds to your answer and press enter...", "bold")))
 
     elif civilisation_number == 2:
-        
+
+        clear_wait()
+
+        stats()
+
+        continue_game()
+
+        print(coloured("⛩️ Ancient China 🐉","bold"))
+        print()
+        print("filllllllerrr texttttttttt")
+
+plant()
+time.sleep(2000)
 main()
