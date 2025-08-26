@@ -283,6 +283,7 @@ def menu(civilisation_number):
     input_menu = input(coloured("\nType here: ","bold")).lower().strip()
     return input_menu
 
+# Function to create and show a map
 def show_map(pos):
     for i in range(3):
         row = ""
@@ -296,6 +297,7 @@ def show_map(pos):
         print(row)
     print()
 
+# Funnction that lets the player move on the map
 def get_moves(pos):
     moves = []
     for d, (dx, dy) in directions.items(): 
@@ -304,6 +306,7 @@ def get_moves(pos):
             moves.append(d)
     return moves
 
+# Funcgion that puts get_moves() and show_map() together into a minigame
 def play():
     pos = (0, 0) 
     while True:
@@ -324,4 +327,5 @@ def play():
             pos = (pos[0] + dx, pos[1] + dy)
         else:
             print(coloured("Invalid move. Try again.\n","magenta"))
+
 

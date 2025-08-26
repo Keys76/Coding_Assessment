@@ -30,7 +30,8 @@ def main():
                 if civilisation_number > 4:
                     clear_screen()
                     print(coloured("Message from commander...","bold"))
-                    print(coloured("Congratulations Agent 0712, you have successfully completed all missions and restored the timeline.","code"))
+                    print(coloured("\nCongratulations Agent 0712, you have successfully completed all missions and restored the timeline.","code"))
+                    continue_game()
                     break
                 else:
                     animate(coloured(f"Congratulations you have completed the mission in {civilisations_dict[civilisation_number-1]['civilisation']}","code"))
@@ -307,7 +308,100 @@ def game_loop(civilisation_number, agent):
         return "win", agent
     
     elif civilisation_number == 4:
-        print("debug")
+
+
+        print(coloured("⚔️ Final Battle 🌌","bold"))
+        print("\nAfter walking through the portal you come out in a mystical looking void in time. In front of you is a shadowy creature that is surrounded with a dark aura. It waves it's hand and ")
+        
+        # Lists
+        weapons = ["Mace", "Rifle", "Sword"]
+        special_attacks = ["Slash", "Stab", "Throw"]
+
+        # Health values
+        agent['health'] = 100
+        enemy_health = 90
+        new_weapon = None
+
+        enemy = "shadowy creature"
+        enemy_damage = 15  
+
+        # Weapon damage dictionary
+        weapon_damage_values = {
+            "Mace": 35,
+            "Rifle": 15,
+            "Sword": 25
+        }
+
+        # Show starting options
+        print("in front of you appears", len(weapons), "weapons:", weapons)
+        print("\nYou have", len(special_attacks), "attack options:", special_attacks)
+
+        # Weapon management
+        print(coloured("\n Weapon Management ", "bold"))
+        print("\n1. Add a new weapon")
+        print("2. Remove a weapon")
+        print("3. Continue to battle")
+
+        weapon_choice = input("\nChoose an option (1, 2, or 3): ")
+
+        if weapon_choice == "1":
+            new_weapon = input("\nEnter the name of the weapon to add: ")
+            weapons.append(new_weapon)
+            print(new_weapon, "has been added to your arsenal.")
+        elif weapon_choice == "2":
+            print("Current Weapons:", weapons)
+            weapon_to_remove = input("\nEnter the name of the weapon to remove: ")
+            if weapon_to_remove in weapons:
+                weapons.remove(weapon_to_remove)
+                print(weapon_to_remove, "has been removed.")
+            else:
+                print("\nThat weapon is not in your list.")
+        elif weapon_choice == "3":
+            print("\nContinuing to battle...")
+
+        # Updated weapon list
+        animate("\nYou have", len(weapons), "weapons:", weapons)
+
+        animate("\nYour health:", agent['health'])
+        animate("Enemy health:", enemy_health)
+        print()
+
+
+        while agent['health'] > 0 and enemy_health > 0:
+            weapon = input("Choose your weapon: ")
+            attack = input("Choose your special attack: ")
+
+            # Work out weapon damage
+            if weapon in weapon_damage_values:
+                damage = weapon_damage_values[weapon]
+            elif new_weapon is not None and weapon == new_weapon:
+                damage = 20
+            else:
+                print("\nInvalid weapon! You miss your turn.")
+                continue
+
+            # Deal damage to enemy
+            enemy_health = enemy_health - damage
+            animate("\nYou attack with", weapon, "and deal", damage, "damage.")
+            animate("Enemy health:", enemy_health)
+
+            if enemy_health <= 0:
+                break
+
+            # Enemy’s turn
+            animate("\nEnemy's turn")
+            agent['health'] = agent['health'] - enemy_damage
+            animate(enemy, "attacks you for:", enemy_damage, "damage!")
+            animate("\nYour health:", agent['health'])
+
+        if agent['health'] > 0:
+            animate("\nYou win the battle against the", enemy + "!")
+            continue_game()
+            return "win", agent
+        else:
+            animate("\nYou have been defeated by the", enemy + ".")
+            continue_game()
+            return "dead", agent
 
 
 main()
