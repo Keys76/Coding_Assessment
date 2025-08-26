@@ -13,7 +13,7 @@ def main():
                 civilisation_number = 1
                 agent = {
                     "health": 100,
-                    "inventory": items.copy()
+                    "inventory": items
                 }
             clear_screen()
             alive, agent = game_loop(civilisation_number, agent)
@@ -52,9 +52,6 @@ def main():
 
 def game_loop(civilisation_number, agent):
 
-
-# Display the introduction message
-introduction()
     if civilisation_number == 1:
 
         riddle_attempts = 0
@@ -139,16 +136,7 @@ introduction()
 
     elif civilisation_number == 2:
 
-        clear_wait()
-
-        stats()
-
-        continue_game()
+        print(coloured("ALERT","red"))
 
         print(coloured("⛩️ Ancient China 🐉","bold"))
-        print()
-        print("filllllllerrr texttttttttt")
 
-plant()
-time.sleep(2000)
-main()
