@@ -285,12 +285,30 @@ def game_loop(civilisation_number, agent):
         clear_screen()
         agent["inventory"].append("Rice")
         stats(civilisation_number, agent)
+        continue_game()
         return "win", agent
 
     elif civilisation_number == 3:
         print(coloured("⚜️ Ancient Rome 🌿","bold"))
-        
+        print()
+        stats(civilisation_number, agent)
+        continue_game()
+        print(coloured("⚜️ Ancient Rome 🌿","bold"))
+        print(coloured("\nYou are now in Ancient Rome and you are walking along the cobblestone streets. However you stops and listen when you hear a group of people talking about some dark smoke coming out of the Colossuem. You decide to investigate it.","magenta"))
+        print(coloured("\nFind your way to the Colosseum using your map ","magenta"))
+        print()
+        continue_game()
+        play()
+        clear_wait()
+        print(coloured("⚜️ Ancient Rome 🌿","bold"))
+        print(coloured("\nYou reach the Colloseum and walk inside. In the middle of the arena is a glowing purple portal with black smoke coming out of it. This must lead to whatever is working against the agency. You walk through it to investigate.","magenta"))
+        print()
+        continue_game()
+        return "win", agent
+    
+    elif civilisation_number == 4:
+        print("debug")
 
-               
+
 main()
 

@@ -288,11 +288,11 @@ def show_map(pos):
         row = ""
         for j in range(3):
             if (i, j) == pos:
-                row += "[X] "
+                row += coloured("   ","t")
             elif game_map[i][j]:
-                row += "[O] "
+                row += coloured("   ","grey_back")
             else:
-                row += " .  "
+                row += coloured("   ","black_back")
         print(row)
     print()
 
@@ -311,17 +311,17 @@ def play():
         place = game_map[pos[0]][pos[1]]
         print("You are at:", place)
 
-        if place == "Colesseum":
-            print("You reached the Colesseum")
+        if place == "Colosseum":
+            print(coloured("You reached the Colosseum","magenta"))
             break
 
         moves = get_moves(pos)
-        print("Available moves:", moves)
+        print("Available moves: ",moves)
 
-        move = input("Move (N/S/E/W): ").upper()
+        move = input(coloured("Move (N/S/E/W): ","magenta")).upper()
         if move in moves:
             dx, dy = directions[move]
             pos = (pos[0] + dx, pos[1] + dy)
         else:
-            print("Invalid move. Try again.\n")
+            print(coloured("Invalid move. Try again.\n","magenta"))
 
