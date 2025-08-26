@@ -15,7 +15,5 @@ items = [
     "First Aid Kit",
     "Flashlight",
     "Map",
-    "One set of rations",
-    "50 coins"
+    "One set of rations"
 ]
-
