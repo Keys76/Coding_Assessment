@@ -20,6 +20,7 @@ def main():
             if alive == "dead":
                 clear_screen()
                 print(coloured("\nGAME OVER","red"))
+                agent = {}
                 time.sleep(1)
                 continue
             else:
@@ -51,7 +52,6 @@ def main():
             menu(civilisation_number)
 
 def game_loop(civilisation_number, agent):
-    """this explains the job of this function"""
 
     if civilisation_number == 1:
 
@@ -149,7 +149,7 @@ def game_loop(civilisation_number, agent):
                 food_question = food_question + 1
             elif food == "n":
                 food_question = food_question + 1
-                return "dead"
+                return "dead", agent
             else:
                 animate(coloured("\nInvalid input","red"))
         
@@ -157,3 +157,4 @@ def game_loop(civilisation_number, agent):
         print(coloured("⛩️ Ancient China 🐉","bold"))
 
 main()
+
