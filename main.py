@@ -13,7 +13,7 @@ def main():
                 civilisation_number = 1
                 agent = {
                     "health": 100,
-                    "inventory": items
+                    "inventory": items.copy()
                 }
             clear_screen()
             alive, agent = game_loop(civilisation_number, agent)
@@ -137,6 +137,8 @@ def game_loop(civilisation_number, agent):
     elif civilisation_number == 2:
 
         print(coloured("ALERT","red"))
+        print(coloured("\nAgent energy depleted: consume food"))
+        input
 
         print(coloured("⛩️ Ancient China 🐉","bold"))
 
