@@ -153,7 +153,6 @@ def plant():
     print(coloured("   ","sky"),coloured(" ","plant"),coloured("            ","sky"))
     clear_wait()
     
-
 # Function to display the game menu and handle user input
 def menu(civilisation_number):
 
