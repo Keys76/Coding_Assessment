@@ -51,6 +51,7 @@ def main():
             menu(civilisation_number)
 
 def game_loop(civilisation_number, agent):
+    """this explains the job of this function"""
 
     if civilisation_number == 1:
 
@@ -136,9 +137,23 @@ def game_loop(civilisation_number, agent):
 
     elif civilisation_number == 2:
 
-        print(coloured("ALERT","red"))
-        print(coloured("\nAgent energy depleted: consume food"))
-        input
+        food_question = 0
+        animate(coloured("ALERT","red"))
+        animate(coloured("\nAgent energy depleted: consume food"))
 
+        while food_question == 0: 
+            food = input(coloured("\nDo you want to eat your rations?: y/n... ","bold"))
+            if food == "y":
+                clear_screen
+                print(coloured("\nYou energy levels are replenished","bold"))
+                food_question = food_question + 1
+            elif food == "n":
+                food_question = food_question + 1
+                return "dead"
+            else:
+                animate(coloured("\nInvalid input","red"))
+        
+        clear_wait
         print(coloured("⛩️ Ancient China 🐉","bold"))
 
+main()
